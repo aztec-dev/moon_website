@@ -1,6 +1,8 @@
 :root {
     --main-colour: #031850;
     --accent-colour: #010A22;
+    --highlight-colour: #0047FF;
+    --light-highlight-colour: #1A3170;
 }
 .temp-border {
   border-style: solid;
@@ -29,7 +31,6 @@ ul li {
 }
 body {
     background: var(--main-colour);
-    color: white;
     font-family: 'Outfit', sans-serif;
 }
 
@@ -37,7 +38,65 @@ body {
 .link {
   margin: 0 25px;
 }
+    
+.nav-container {
+  display: flex;
+  position: fixed;
+  bottom: 20px; 
+  left: 50%;
+  width: max-content;
+  height: 50px;
+  align-items: center;
+  transform: translateX(-50%);
+  background-color: var(--accent-colour);
+  border-radius: 25px;
+  z-index: 1000; /* Ensure it sits on top */
+}
 
+ul {
+  list-style-type: none;
+}
+
+#main-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.container {
+  background-color: var(--light-highlight-colour);
+  border-radius: 25px;
+  align-items: center;
+  /* height: 100px; */
+}
+
+.center {
+  /* border: 5px solid; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 50px;
+}
+
+.container button {
+  background-color: var(--highlight-colour);
+  border: none;
+  color: white;
+  font-family: 'Outfit';
+  font-size: large;
+  width: 250px;
+  height: 50px;
+  border-radius: 25px;
+  margin-top: 30px;
+}
+
+.container button:hover {
+  background-color: var(--accent-colour);
+}
+
+.container button:active {
+  background-color: var(--accent-colour);
+}
 /* Helper classes*/
 
 .d-flex {
@@ -52,41 +111,16 @@ body {
   flex-direction: row;
 }
 
-/* Custom classes */
-#mobile-nav {
-  display: none;
+.text-white {
+  color: white;
 }
 
-#desktop-nav{
-  display: block;
+.large-text {
+  font-size: 82px;
 }
+
+/* Custom classes */
 /* Mobile viewports */
 @media only screen and (max-width: 768px) {
-  #desktop-nav {
-      display: none;
-  }
-
-  #mobile-nav {
-    display: block;
-  }
-    
-  .nav-container {
-    display: flex;
-    position: fixed;
-    bottom: 20px; 
-    left: 50%;
-    width: max-content;
-    height: 50px;
-    align-items: center;
-    transform: translateX(-50%);
-    background-color: var(--accent-colour);
-    border-radius: 25px;
-    z-index: 1000; /* Ensure it sits on top */
-  }
-
-  ul {
-    list-style-type: none;
-  }
-
 }
 
