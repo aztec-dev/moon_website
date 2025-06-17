@@ -1,0 +1,22 @@
+:root {
+    --main-colour: #031850;
+}
+
+/* Defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    background: var(--main-colour);
+    color: white;
+}
+
+/* Custom classes */
