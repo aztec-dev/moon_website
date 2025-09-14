@@ -3,6 +3,7 @@
     --accent-colour: #010A22;
     --highlight-colour: #0047FF;
     --light-highlight-colour: #1A3170;
+    --x-tra-large-font: 82px;
 }
 .temp-border {
   border-style: solid;
@@ -32,6 +33,7 @@ ul li {
 body {
     background: var(--main-colour);
     font-family: 'Outfit', sans-serif;
+    width: 100%;
 }
 
 /* navigation */
@@ -63,6 +65,10 @@ ul {
 }
 
 .container {
+  text-wrap: wrap;
+}
+
+.subcontainer {
   background-color: var(--light-highlight-colour);
   border-radius: 25px;
   align-items: center;
@@ -78,7 +84,7 @@ ul {
   padding: 50px;
 }
 
-.container button {
+.subcontainer button {
   background-color: var(--highlight-colour);
   border: none;
   color: white;
@@ -90,11 +96,11 @@ ul {
   margin-top: 30px;
 }
 
-.container button:hover {
+.subcontainer button:hover {
   background-color: var(--accent-colour);
 }
 
-.container button:active {
+.subcontainer button:active {
   background-color: var(--accent-colour);
 }
 /* Helper classes*/
@@ -116,11 +122,20 @@ ul {
 }
 
 .large-text {
-  font-size: 82px;
+  font-size: var(--x-tra-large-font);
 }
 
 /* Custom classes */
 /* Mobile viewports */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 375px) {
+  .container {
+    width: 100%;
+    margin: 50px 0px;
+    text-align: center;
+    text-wrap: balance;
+  }
+  .large-text {
+    font-size: 52px;
+  }
 }
 
